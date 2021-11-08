@@ -6,7 +6,7 @@ FROM golang:1.16 as build
 WORKDIR /go-hello
 
 # Install dependencies in go.mod and go.sum
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 
 # Copy rest of the application source code
